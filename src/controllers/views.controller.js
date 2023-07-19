@@ -60,7 +60,7 @@ export const getProductsController = async (req, res) => {
             disable
         });
     } catch (error) {
-        console.log('Cannot get products view with mongoose: '+error);
+        req.logger.error('Cannot get products view with mongoose: '+error);
         res.status(500).json({ status: "error", message: error.message });
     }
 }
@@ -82,7 +82,7 @@ export const getCartController = async (req, res) => {
             products: products
         });
     } catch (error) {
-        console.log('Cannot get carts with mongoose: ' + error)
+        req.logger.error('Cannot get carts with mongoose: ' + error)
         res.status(400).json({ message: error });
     }
 }

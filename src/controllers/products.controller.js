@@ -40,7 +40,7 @@ export const getProductsController = async (req, res) => {
             payload: products
         });
     } catch (error) {
-        console.log('Cannot get products with mongoose: '+error);
+        req.logger.error('Cannot get products with mongoose: '+error);
         res.status(500).json({ status: "error", message: error.message });
     }
 }
@@ -55,14 +55,14 @@ export const getProductController = async (req, res) => {
                 cause: errorService.generateProductErrorParam(productId),
                 message:"Error when try to find the product by id",
                 errorCode: EError.INVALID_PARAM
-            }) 
-        }      
+            });
+        }
         res.send({
             status: 'success',
             payload: result
         });
     } catch (error) {
-        console.log('Cannot get the product with mongoose: '+error);
+        req.logger.error('Cannot get the product with mongoose: '+error);
         res.status(400).json({ message: error });
     }
 }
@@ -85,7 +85,7 @@ export const createProductController = async (req, res) => {
             });
         }
     } catch (error) {
-        console.log('Cannot post the product with mongoose: '+error);
+        req.logger.error('Cannot post the product with mongoose: '+error);
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -115,7 +115,7 @@ export const updateProductController = async (req, res) => {
             res.send({status: 'success', payload: result})
         }
     } catch (error) {
-        console.log('Cannot update the product with mongoose: '+error);
+        req.logger.error('Cannot update the product with mongoose: '+error);
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -134,7 +134,7 @@ export const deleteProductController = async (req, res) => {
         }
         res.send({status: 'success', payload: result})
     } catch (error) {
-        console.log('Cannot delete the product with mongoose: '+error);
+        req.logger.error('Cannot delete the product with mongoose: '+error);
         res.status(400).json({ status: "error", message: error.message });
     }
 }

@@ -1,7 +1,7 @@
 import passport from 'passport';
 import local from 'passport-local';
 import { userModel } from '../dao/models/users.model.js';
-import { createHash, validatePassword } from '../utils.js';
+import { createHash, validatePassword } from '../utils/utils.js';
 import GitHubStrategy from 'passport-github2';
 import { config } from './config.js';
 import { cartService } from '../repository/index.js';

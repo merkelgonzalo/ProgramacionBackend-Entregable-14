@@ -1,5 +1,5 @@
 import express from 'express';
-import __dirname from './utils.js';
+import __dirname from './utils/utils.js';
 import handlebars from 'express-handlebars';
 import viewsRouter from './routes/views.router.js';
 import {Server} from 'socket.io';
@@ -14,6 +14,7 @@ import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 import { config } from './config/config.js';
 import { errorHandler } from "./middlewares/errorHandler.js";
+
 
 const MONGO = config.mongo.url;
 const PORT = config.server.port;

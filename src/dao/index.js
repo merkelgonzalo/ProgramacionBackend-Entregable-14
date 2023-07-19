@@ -1,5 +1,4 @@
 import { dbConnection } from "../config/dbConnection.js";
-//import { UserMongo } from "./managers/";
 import { ProductManager } from "./managers/ProductManager.js";
 import { CartManager } from "./managers/CartManager.js";
 

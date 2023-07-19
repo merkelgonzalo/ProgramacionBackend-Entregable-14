@@ -6,7 +6,7 @@ export const getTicketsController = async (req, res) => {
         let result = await ticketService.getTickets();
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot get tickets with mongoose: ' + error)
+        req.logger.error('Cannot get tickets with mongoose: ' + error)
         res.status(500).json({ status: "error", message: error.message });
     }
 }
@@ -18,7 +18,7 @@ export const createTicketController = async (req, res) => {
         let result = await ticketService.addTicket(amount, purchaser);
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot create ticket with mongoose: ' + error)
+        req.logger.error('Cannot create ticket with mongoose: ' + error)
         res.status(500).json({ status: "error", message: error.message });
     }
 }

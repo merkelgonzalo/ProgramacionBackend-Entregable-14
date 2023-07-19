@@ -1,5 +1,5 @@
 import { productModel } from '../models/products.model.js';
-import ManagerAccess from '../managers/ManagerAccess.js';
+import ManagerAccess from './ManagerAccess.js';
 import mongoose from 'mongoose';
 
 const managerAccess = new ManagerAccess();
@@ -35,7 +35,7 @@ export default class ProductManager{
 
     get = async(query, options) => {   
         try{
-            await managerAccess.saveLog('GET producs');
+            //await managerAccess.saveLog('GET producs');
             const result = await this.model.paginate(query, options);
             return result;
         }catch(error){
@@ -45,7 +45,7 @@ export default class ProductManager{
 
     getProduct = async(pid) => {
         try{
-            await managerAccess.saveLog('GET a product');
+            //await managerAccess.saveLog('GET a product');
             let result;
             if(ObjectId.isValid(pid)){
                 result = await this.model.find({_id: pid});

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import __dirname from '../../utils.js';
+import __dirname from '../../utils/utils.js';
 
 
 export default class ManagerAccess{
@@ -10,11 +10,11 @@ export default class ManagerAccess{
         const hour = new Date().toLocaleTimeString();
         const message = `Date: ${date} - Hour: ${hour} - Method: ${method}`
         console.log(message);
-        await fs.promises.appendFile( __dirname +'/dao/managers/logs.txt',`Date: ${date} - Hour: ${hour} - Method: ${method}\n`,(err)=>{
+        await fs.promises.appendFile( __dirname +'/dao/files/logs.txt',`Date: ${date} - Hour: ${hour} - Method: ${method}\n`,(err)=>{
             console.log(err);
             return err;
         })
-
+        
     }
 
 }

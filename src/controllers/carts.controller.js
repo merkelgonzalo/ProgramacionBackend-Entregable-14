@@ -13,7 +13,7 @@ export const getCartsController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot get carts with mongoose: ' + error)
+        req.logger.error('Cannot get carts with mongoose: ' + error)
         res.status(500).json({ status: "error", message: error.message });
     }
 }
@@ -32,7 +32,7 @@ export const getCartController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot get the cart with mongoose: ' + error)
+        req.logger.error('Cannot get the cart with mongoose: ' + error)
         res.status(400).json({ message: error });
     }
 }
@@ -42,7 +42,7 @@ export const createCartController = async (req, res) => {
         let result = await cartService.addCart();
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot create cart with mongoose: ' + error)
+        req.logger.error('Cannot create cart with mongoose: ' + error)
         res.status(500).json({ status: "error", message: error.message });
     }
 }
@@ -74,7 +74,7 @@ export const addProductController = async (req, res) => {
         if (result === 1) return res.status(400).json({ status: "error", error: "OUT OF STOCK" });
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot add product with mongoose: ' + error)
+        req.logger.error('Cannot add product with mongoose: ' + error)
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -94,7 +94,7 @@ export const deleteProductController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot delete product with mongoose: ' + error)
+        req.logger.error('Cannot delete product with mongoose: ' + error)
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -113,7 +113,7 @@ export const deleteProductsController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot delete product with mongoose: ' + error)
+        req.logger.error('Cannot delete product with mongoose: ' + error)
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -141,7 +141,7 @@ export const updateProductsController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot delete product with mongoose: ' + error)
+        req.logger.error('Cannot delete product with mongoose: ' + error)
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -170,7 +170,7 @@ export const updateProductController = async (req, res) => {
         }
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot add product with mongoose: ' + error)
+        req.logger.error('Cannot add product with mongoose: ' + error)
         res.status(400).json({ status: "error", message: error.message });
     }
 }
@@ -184,7 +184,7 @@ export const buyCartController = async (req, res) => {
         // if (result === []) return res.status(400).json({ status: "error", error: "OUT OF STOCK" });
         res.send({ result: "success", payload: result });
     } catch (error) {
-        console.log('Cannot buy cart with mongoose: ' + error)
+        req.logger.error('Cannot buy cart with mongoose: ' + error)
         res.status(500).json({ status: "error", message: error.message });
     }
 }

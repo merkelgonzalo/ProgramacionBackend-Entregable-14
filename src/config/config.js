@@ -11,6 +11,7 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const CALLBACK_URL = process.env.CALLBACK_URL;
 const PERSISTENCE = process.env.PERSISTENCE;
+const NODE_ENV = process.env.NODE_ENV
 
 export const config = {
     server: {
@@ -27,5 +28,8 @@ export const config = {
         clientId: CLIENT_ID,
         clientSecret: CLIENT_SECRET,
         callbackUrl: CALLBACK_URL
+    },
+    environment: {
+        nodeEnvironment: NODE_ENV
     }
 }

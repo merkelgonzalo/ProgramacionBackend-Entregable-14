@@ -26,7 +26,7 @@ export const createProductsController = async (req, res) => {
             payload: result
         });
     } catch (error) {
-        console.log('Cannot post the mockings products with mongoose: '+error);
+        req.logger.error('Cannot post the mockings products with mongoose: '+error);
         res.status(400).json({ status: "error", message: error.message });
     }
 }

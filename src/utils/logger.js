@@ -39,10 +39,14 @@ const productionLogger = winston.createLogger({
     levels: customLevelsOptions.levels,
     transports: [
         new winston.transports.Console({
-            level: 'info'
+            level: 'info',
+            format: winston.format.combine(
+                winston.format.colorize({ colors: customLevelsOptions.colors }),
+                winston.format.simple()
+            )
         }),
         new winston.transports.File({
-            filename: '../dao/files/errors.log',
+            filename: './src/dao/files/errors.log.json',
             level: 'error',
             format: winston.format.json() 
         })

@@ -10,25 +10,26 @@ import {
     updateProductController,
     buyCartController
 } from '../controllers/carts.controller.js';
+import { addLogger } from '../utils/logger.js';
 
 const router = Router();
 
-router.get('/', getCartsController);
+router.get('/', addLogger, getCartsController);
 
-router.get('/:cid', getCartController);
+router.get('/:cid', addLogger, getCartController);
 
-router.post('/', createCartController);
+router.post('/', addLogger, createCartController);
 
-router.post('/:cid/product/:pid', addProductController);
+router.post('/:cid/product/:pid', addLogger, addProductController);
 
-router.delete('/:cid/products/:pid', deleteProductController);
+router.delete('/:cid/products/:pid', addLogger, deleteProductController);
 
-router.delete('/:cid', deleteProductsController);
+router.delete('/:cid', addLogger, deleteProductsController);
 
-router.put('/:cid', updateProductsController);
+router.put('/:cid', addLogger, updateProductsController);
 
-router.put('/:cid/products/:pid', updateProductController);
+router.put('/:cid/products/:pid', addLogger, updateProductController);
 
-router.post('/:cid/purchase', buyCartController);
+router.post('/:cid/purchase', addLogger, buyCartController);
 
 export default router;

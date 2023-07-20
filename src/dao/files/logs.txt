@@ -1,0 +1,25 @@
+Date: 19/7/2023 - Hour: 20:43:13 - Method: GET producs
+Date: 19/7/2023 - Hour: 20:43:17 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:45:48 - Method: GET producs
+Date: 19/7/2023 - Hour: 20:46:09 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:50:34 - Method: GET producs
+Date: 19/7/2023 - Hour: 20:50:39 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:51:25 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:53:54 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:54:25 - Method: GET a product
+Date: 19/7/2023 - Hour: 20:55:11 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:00:16 - Method: GET producs
+Date: 19/7/2023 - Hour: 21:00:21 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:10:39 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:12:11 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:12:29 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:13:35 - Method: GET producs
+Date: 19/7/2023 - Hour: 21:14:55 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:15:14 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:15:48 - Method: GET producs
+Date: 19/7/2023 - Hour: 21:15:51 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:16:39 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:17:19 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:17:31 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:18:33 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:19:15 - Method: GET a product

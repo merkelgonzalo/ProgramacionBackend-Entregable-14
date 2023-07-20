@@ -1,17 +1,18 @@
 import {Router} from 'express';
 import { getCartController, getProductsController, registerController, loginController } from '../controllers/views.controller.js';
 import { autorization } from '../middlewares/autorization.js';
+import { addLogger } from '../utils/logger.js';
 
 const router = Router();
 
-router.get('/', getProductsController);
+router.get('/', addLogger, getProductsController);
 
 // router.get('/realTimeProducts', async (req, res) => { 
 //     const products = await productModel.find().lean();
 //     res.render('realTimeProducts', {products: products});
 // });
 
-router.get('/carts/:cid', getCartController);
+router.get('/carts/:cid', addLogger, getCartController);
 
 // const adminAcces = (req,res,next) =>{
 //     console.log(req.session.user.role);
@@ -31,8 +32,8 @@ const publicAcces = (req,res,next) =>{
     next();
 }
 
-router.get('/register', publicAcces, registerController);
+router.get('/register', addLogger, publicAcces, registerController);
 
-router.get('/login', publicAcces, loginController);
+router.get('/login', addLogger, publicAcces, loginController);
 
 export default router;

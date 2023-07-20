@@ -10,11 +10,12 @@ import productRouter from './routes/products.router.js';
 import cartRouter from './routes/carts.router.js';
 import sessionRouter from './routes/sessions.router.js';
 import mockingRouter from './routes/mockings.router.js';
+import loggerRouter from './routes/loggers.router.js';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 import { config } from './config/config.js';
 import { errorHandler } from "./middlewares/errorHandler.js";
-
+import { addLogger } from './utils/logger.js';
 
 const MONGO = config.mongo.url;
 const PORT = config.server.port;
@@ -40,12 +41,14 @@ app.engine('handlebars', handlebars.engine());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public')); //Important for use js y css files on templates
+app.use(addLogger);
 
 app.use('/', viewsRouter);
 app.use('/api/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use('/api/sessions', sessionRouter);
 app.use('/api/mockingproducts', mockingRouter);
+app.use('/api/loggertest', loggerRouter);
 
 app.use(passport.initialize());
 app.use(passport.session());

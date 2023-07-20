@@ -23,3 +23,8 @@ Date: 19/7/2023 - Hour: 21:17:19 - Method: GET a product
 Date: 19/7/2023 - Hour: 21:17:31 - Method: GET a product
 Date: 19/7/2023 - Hour: 21:18:33 - Method: GET a product
 Date: 19/7/2023 - Hour: 21:19:15 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:48:20 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:49:23 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:50:28 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:50:45 - Method: GET a product
+Date: 19/7/2023 - Hour: 21:51:19 - Method: GET a product

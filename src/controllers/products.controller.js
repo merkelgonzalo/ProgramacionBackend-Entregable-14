@@ -62,7 +62,7 @@ export const getProductController = async (req, res) => {
             payload: result
         });
     } catch (error) {
-        req.logger.error('Cannot get the product with mongoose: '+error);
+        req.logger.fatal('Cannot get the product with mongoose: '+error);
         res.status(400).json({ message: error });
     }
 }

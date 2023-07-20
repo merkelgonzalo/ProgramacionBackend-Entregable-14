@@ -48,7 +48,7 @@ app.use('/api/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use('/api/sessions', sessionRouter);
 app.use('/api/mockingproducts', mockingRouter);
-app.use('/api/loggertest', loggerRouter);
+app.use('/api/loggertest', addLogger, loggerRouter);
 
 app.use(passport.initialize());
 app.use(passport.session());
